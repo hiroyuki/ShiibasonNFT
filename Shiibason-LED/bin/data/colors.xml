@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<data>
+	<light>
+		<type>1</type>
+		<from>0</from>
+		<to>2</to>
+		<colorr>0</colorr>
+		<colorg>50</colorg>
+		<colorb>16</colorb>
+	</light>
+	<light>
+		<type>1</type>
+		<from>6</from>
+		<to>42</to>
+		<colorr>64</colorr>
+		<colorg>50</colorg>
+		<colorb>16</colorb>
+	</light>
+</data>

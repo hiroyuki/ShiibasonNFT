@@ -72,3 +72,14 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+.DS_Store
+Shiibason-LED/Shiibason-LED.xcodeproj/xcshareddata/xcschemes/Shiibason-LED Release.xcscheme
+Shiibason-LED/Shiibason-LED.xcodeproj/xcshareddata/xcschemes/Shiibason-LED Debug.xcscheme
+Shiibason-LED/Shiibason-LED.xcodeproj/project.xcworkspace/xcuserdata/horihiroyuki.xcuserdatad/UserInterfaceState.xcuserstate
+Shiibason-LED/Shiibason-LED.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Shiibason-LED/Shiibason-LED.xcodeproj/project.pbxproj
+Shiibason-LED/Project.xcconfig
+Shiibason-LED/openFrameworks-Info.plist
+Shiibason-LED/config.make
+Shiibason-LED/Makefile
+Shiibason-LED/of.entitlements
