@@ -31,4 +31,8 @@ class ofApp : public ofBaseApp{
     Light tmp;
     bool preview;
     ofXml xml;
+    int currentScene = 0;
+    int nextScene = 1;
+    float progress = 0;
+    float rotate = 0;
 };
