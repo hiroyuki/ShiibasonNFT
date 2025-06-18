@@ -29,7 +29,7 @@ public:
         
     }
     
-    void setColor(int currentScene, int nextScene, float progress, float rotate, Light light){
+    void setColor(int currentScene, int nextScene, float progress, float rotate, Light light, float brightness){
         if (light.sceneID == currentScene || light.sceneID == nextScene){
             ofPushStyle();
             ofEnableBlendMode(OF_BLENDMODE_ADD);
@@ -39,7 +39,7 @@ public:
             int b = light.sceneID == currentScene ? light.color.b * (1 - progress) : light.color.b * progress;
             rotateValue = rotate == 0 ? 0 : rotateValue + rotate;
 //            ofLog()<<r << " " << g << " " << b;
-            ofSetColor(r,g,b);
+            ofSetColor(r*brightness,g*brightness,b*brightness);
             int from = int(light.from + rotateValue) % (int)datas[light.type].get()->getWidth();
             ofDrawRectangle(from, 0, light.width, 1);
             if(from + light.width > (int)datas[light.type].get()->getWidth()) {
@@ -72,9 +72,12 @@ public:
         
         {
             flex2.allocate(100, 1, GL_RGB);
+            ofPushMatrix();
             flex2.begin();
-            datas[Light::FLEX].get()->draw(-100,0);
+            ofScale(-1,1);
+            datas[Light::FLEX].get()->draw(-200,0);
             flex2.end();
+            ofPopMatrix();
             flex2.readToPixels(flex1Data);
             ofxArtnetMessage m = flex1Data;
             m.setUniverse15(1);

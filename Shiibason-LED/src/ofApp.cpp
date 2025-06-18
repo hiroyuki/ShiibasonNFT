@@ -76,16 +76,19 @@ void ofApp::update(){
         if ( m.getAddress() == "/preview") {
             preview = m.getArgAsBool(0);
         }
+        if (m.getAddress() == "/brightness") {
+            brightness = m.getArgAsFloat(0);
+        }
     }
     artnet.clearColor(Light::FLEX, ofColor::black);
     artnet.clearColor(Light::BLAST, ofColor::black);
     
     if(preview) {
-        artnet.setColor(currentScene, nextScene, progress,rotate, tmp);
+        artnet.setColor(currentScene, nextScene, progress,rotate, tmp,brightness);
     }
     
     for (auto color : lights) {
-        artnet.setColor(currentScene, nextScene, progress,rotate, color);
+        artnet.setColor(currentScene, nextScene, progress,rotate, color,brightness);
     }
     artnet.sendColor();
 }

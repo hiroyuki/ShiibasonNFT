@@ -35,4 +35,5 @@ class ofApp : public ofBaseApp{
     int nextScene = 1;
     float progress = 0;
     float rotate = 0;
+    float brightness = 1;
 };
